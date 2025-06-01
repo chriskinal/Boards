@@ -129,6 +129,16 @@ void HPR_Handler()
     // Solution quality factor
     parser.getArg(4, solQuality);
     solQualityHPR = atoi(solQuality);
+    if ( solQualityHPR >=4 )
+    {
+        digitalWrite(GPSGREEN_LED, HIGH);
+        digitalWrite(GPSRED_LED, LOW);
+    }
+    else
+    {
+        digitalWrite(GPSRED_LED, LOW);
+        digitalWrite(GPSGREEN_LED, blink);
+    }
 
     useDual = true;
     imuHandler();
