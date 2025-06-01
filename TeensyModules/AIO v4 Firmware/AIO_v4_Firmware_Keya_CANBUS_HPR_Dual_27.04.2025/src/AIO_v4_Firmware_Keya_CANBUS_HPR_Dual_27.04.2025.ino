@@ -145,7 +145,7 @@ float yaw = 0;
 // Setup procedure ------------------------
 void setup()
 {
-    delay(500);                       //Small delay so serial can monitor start up
+    delay(5000);                       //Small delay so serial can monitor start up
     set_arm_clock(450000000);         //Set CPU speed to 150mhz
     Serial.println("\r\n** AIO v4 Firmware 27.04.2025 (Inc Keya CANBUS & HPR Dual **\r\n");
     Serial.print("CPU speed set to: ");
